@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?hwvq8');
+  src:  url('../fonts/icomoon.eot?hwvq8#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?hwvq8') format('truetype'),
+    url('../fonts/icomoon.woff?hwvq8') format('woff'),
+    url('../fonts/icomoon.svg?hwvq8#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+.w{
+	width: 1200px;
+	margin: 0 auto;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.style_red{
+	color: #c81623;
+}
+.shortcut{
+	height: 31px;
+	line-height: 31px;
+	background-color: #f1f1f1;
+}
+.shortcut ul li{
+	float: left;
+}
+.header{
+    position: relative;
+	height: 105px;
+	background-color: antiquewhite;
+}
+.logo{
+	position: absolute;
+	top:25px;
+	width: 171px;
+	height: 61px;
+	background-color: aqua;
+	background-image: url(images/div2.jpg);
+}
+.search{
+	position: absolute;
+	left: 346px;
+	top:25px;
+	width: 538px;
+	height: 36px;
+	border: 2px solid #b1191a;
+}
+.search input{
+	float: left;
+	width: 454px;
+	height: 32px;
+}
+.search button{
+	float: left;
+	width: 80px;
+	height: 32px;
+	background-color: #b1191a;
+}

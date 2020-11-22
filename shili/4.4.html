@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>详情页面</title>
+<link href="style/shopdetail.css" rel="stylesheet" type="text/css">
+
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/common.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+	  var showproduct = {
+		  "boxid":"showbox",
+		  "sumid":"showsum",
+		  "boxw":400,
+		  "boxh":550,
+		  "sumw":60,//列表每个宽度,该版本中请把宽高填写成一样
+		  "sumh":60,//列表每个高度,该版本中请把宽高填写成一样
+		  "sumi":7,//列表间隔
+		  "sums":5,//列表显示个数
+		  "sumsel":"sel",
+		  "sumborder":1,//列表边框，没有边框填写0，边框在css中修改
+		  "lastid":"showlast",
+		  "nextid":"shownext"
+		  };//参数定义	  
+	 $.ljsGlasses.pcGlasses(showproduct);//方法调用，务必在加载完后执行
+	 
+	 $(function(){
+
+		$('.tabs a').click(function(){
+			
+			var $this=$(this);
+			$('.panel').hide();
+			$('.tabs a.active').removeClass('active');
+			$this.addClass('active').blur();
+			var panel=$this.attr("href");
+			$(panel).show();				
+			return fasle;  //告诉浏览器  不要纸箱这个链接
+			})//end click
+			
+			
+			$(".tabs li:first a").click()   //web 浏览器，单击第一个标签吧
+	
+
+		
+		})//end ready
+		
+		$(".centerbox li").click(function(){
+			$("li").removeClass("now");
+			$(this).addClass("now")
+			
+			});
+		
+			
+});
+	
+			
+		
+		
+</script>
+</head>
+
+<body>
+<!-----header部分------->
+<div class="header">
+<div class="top">
+	<div class="top1">
+		<a href="welcome.html">登录</a>
+        <a href="register.html">注册</a>
+		<a href="#"><img src="images/index_img/top1.jpg">我的购物车</a>
+		<a href="#"><img src="images/index_img/top3.jpg">联系我们</a>
+	</div>
+</div>
+<!-----logo_search部分------->
+<div class="logobg">
+	<div class="center">
+		<div class="logo">
+			<img src="images/img/div3_page1.jpg" width="249" height="55">
+		</div>
+		 <form id="searchForm">
+     <input type="text" id="searchTxt">
+     <input type="submit" value="搜  索" id="search_btn">
+     </form>
+	</div>
+</div>
+<!-----主导航部分------->
+	<div class="bottom">
+    		<div class="menu"><a href="#">全部商品分类</a></div>	
+		<div class="nav">
+			<a href="index.html" class="now">首页</a>
+			<a href="tuangou.html">个人物品</a>
+			<a href="mingshihuicui.html">联系客服</a>
+			<a href="yipinyizhan.html">我的购物车</a>
+            <a href="western.html">待评价</a>
+		</div>
+	</div>
+    
+    
+</div>
+<!-----header结束------->
+<!-----商品详情部分------->
+<div class="shopdetails">
+	<!-------放大镜-------->
+	<div id="leftbox">
+	<div id="showbox">
+  <img src="images/shopdetail/4_sofa.png" width="400" height="550" />
+
+
+	</div><!--展示图片盒子-->
+		<div id="showsum"></div><!--展示图片里边-->
+		<p class="showpage">
+ 		 <a href="javascript:void(0);" id="showlast"> < </a>
+  		 <a href="javascript:void(0);" id="shownext"> > </a>
+		</p>
+        
+	</div>
+    <!----中间----->
+
+    <div class="centerbox">
+    	<p class="imgname">百冠环球 沙发 布艺沙发客厅整装组合北欧现代简约 三防科技布可拆洗布沙发套装家具 四人位+贵妃榻（颜色备注） </p>
+    	<p class="Aprice">价格：<samp>￥3899.90</samp></p>
+    	<p class="price">促销价：<samp>￥3899.90</samp></p>
+    	<p class="youhui">店铺优惠：<samp>购物满两件打八折</samp></p>
+    	<p class="kefu">客服：</p>
+        <ul>
+        <li class="kuanshi">款式：</li>
+        <li class="now shopimg"><a href="#" title="戴尔"><img src="images/shopdetail/4_sofa.png" width="45"></a></li>
+
+        </ul>
+        <div class="clear"></div>
+        <p class="chima">尺码：</p>
+        <p class="buy"><a href="../syr/pay4_5.html" id="firstbuy">立即购买</a><a href="#">加入购物车</a></p>
+   		<div class="clear"></div>
+        <div class="fenx"><a href="#"><img src="images/shopdetail/tell07.png"></a></div>
+        <p class="fuwu">服务承诺：</p>
+        <p class="pay">支付方式：</p>
+    </div>
+ 
+	<!-----右边------->
+   <div class="rightbox">
+    	<p class="name">——热卖商品</p>
+    	<img src="images/shopdetail/reimai02.jpg" width="130" height="180">
+		<p>￥58元</p>
+     
+    	<img src="images/shopdetail/reimai01.jpg" width="130" height="180">
+		<p>￥58元</p>
+        
+        
+    	<img src="images/shopdetail/reimai03.jpg" width="130" height="180">
+		<p>￥58元</p>
+    </div>
+            
+</div>
+<!-----商品详情部分结束------->
+
+<!----bottom_页脚部分----->
+<div class="backf">
+<div id="footer">
+
+	 <ul>
+  <li class="sy">支付方式</li>
+  <li><a href="#">在线支付</a></li>
+  <li><a href="#">货到付款</a></li>
+  <li><a href="#">发票说明</a></li>
+  <li><a href="#">余额宝</a></li>
+  
+  </ul>
+    <ul>
+  <li class="sy">购物指南</li>
+  <li><a href="#">免费注册</a></li>
+  <li><a href="#">申请会员</a></li>
+  <li><a href="#">开通支付宝</a></li>
+  <li><a href="#">支付宝充值</a></li>
+  </ul>
+  <ul>
+  <li class="sy">商家服务</li>
+  <li><a href="#">联系我们</a></li>
+  <li><a href="#">客服服务</a></li>
+  <li><a href="#">物流服务</a></li>
+  <li><a href="#">缺货赔付</a></li>
+  </ul>
+    <ul>
+  <li class="sy">关于我们</li>
+  <li><a href="#">知识产权</a></li>
+  <li><a href="#">网站合作</a></li>
+  <li><a href="#">规则意见</a></li>
+  <li><a href="#">帮助中心</a></li>
+  </ul>
+    <ul>
+  <li class="sy">其他服务</li>
+  <li><a href="#">诚聘英才</a></li>
+  <li><a href="#">法律声明</a></li>
+
+  </ul><div class="clear"></div>
+</div>	
+    <div class="foot">
+    	 <p>使用本网站即表示接受 用户协议</p>
+       <p>版权所有——————————————————</p>
+    
+	</div>
+</div>
+
+</body>
+</html>
